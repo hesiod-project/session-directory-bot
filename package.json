@@ -1,0 +1,19 @@
+{
+  "name": "session-directory-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuroscr/session-directory-bot.git"
+  },
+  "author": "Ryan Tharp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neuroscr/session-directory-bot/issues"
+  },
+  "homepage": "https://github.com/neuroscr/session-directory-bot#readme"
+}
