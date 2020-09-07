@@ -11,16 +11,19 @@ client.loadIdentity({
   displayName: 'Vector0\'s Bot Directory',
   //avatarFile: '5f16f4fd7ca8def05968bbca_Jk79urotkJJtMHZNO3kduoJLgAW6X6kgceEjnbI2VeeOseBujKs6ok_IbYl3OHxaaHLUmtMVRNk.png',
 }).then(async() => {
-  client.open()
+  console.log(client.identityOutput)
+  await client.open()
   client.on('updateLastHash', hash => {
     fs.writeFileSync('lastHash.txt', hash)
   })
   client.on('messages', msgs => {
     msgs.forEach(async msg => {
       console.log('msg', msg)
-      client.send(msg.source, `
+      // maybe PING each bot to see if it's online before responding?
+      await client.send(msg.source, `
 05e39a87f4da2e0a01b381bdcb96090f88a110c7a8bb1b3c09cc1369dbdb6be264 Get list of open groups
 05732e0e16b5276c984c1eaeb4e4fe0e11e7868a8c91c88acb438a3e5c4eaacc19 Service Node Bot
+0591c21f24e6f29ad203e8074d87920d5b13f6f8cab3f2fdb47e0af31db300e17d LNS Bot
 
 If you have a good idea for bot, let Vector0 know:
 057c040ac3ec3fc00c3062a6d32f3134b3fd1831080579ad025b3243b7b4aa8366
